@@ -16,6 +16,9 @@
    f. form.group
    g. form.label
    h. form.control
+   i. card, card.body
+   j. badge
+
 7. react-select:
    1. CreatableReactSelect
    2. 
