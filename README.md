@@ -4,8 +4,10 @@
 # Different things used:
 1. react-bootstrap
 2. Bootstrap
-3. react-select (instead of form.select to have different way of adding input)
-4. react-bootstrap : 
+3. uuid
+4. 
+5. react-select (instead of form.select to have different way of adding input)
+6. react-bootstrap : 
    a. container
    b. form
    c. stack
@@ -14,7 +16,7 @@
    f. form.group
    g. form.label
    h. form.control
-5. react-select:
+7. react-select:
    1. CreatableReactSelect
    2. 
 
