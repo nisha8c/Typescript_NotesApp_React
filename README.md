@@ -1,3 +1,27 @@
+# Note APP
+
+
+# Different things used:
+1. react-bootstrap
+2. Bootstrap
+3. react-select (instead of form.select to have different way of adding input)
+4. react-bootstrap : 
+   a. container
+   b. form
+   c. stack
+   d. row
+   e. column
+   f. form.group
+   g. form.label
+   h. form.control
+5. react-select:
+   1. CreatableReactSelect
+   2. 
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

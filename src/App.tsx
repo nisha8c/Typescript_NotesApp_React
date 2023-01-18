@@ -4,13 +4,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
+import NewNote from './components/NewNote'
 
 function App() {
   return (
     <Container className='my-4'>
       <Routes>
         <Route path='/' element={<h1>Hi</h1>}>Home</Route>
-        <Route path='/new' element={<h1>Hi</h1>}>New</Route>
+        <Route path='/new' element={<NewNote />}>New</Route>
 
         <Route path='/:id' element={<h1>Hi</h1>}>
           <Route index element={<h1>Show</h1>} />
