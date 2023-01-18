@@ -19,7 +19,7 @@ function App() {
     })
   }, [notes, tags]);
 
-  function onCreateNote({ tags, ...data }: NoteData) {
+  const onCreateNote = ({ tags, ...data }: NoteData) => {
     setNotes(prevNotes => {
       return [
         ...prevNotes,
@@ -28,7 +28,7 @@ function App() {
     })
   }
 
-  function onUpdateNote(id: string, { tags, ...data }: NoteData) {
+  const onUpdateNote = (id: string, { tags, ...data }: NoteData) => {
     setNotes(prevNotes => {
       return prevNotes.map(note => {
         if (note.id === id) {
@@ -40,17 +40,17 @@ function App() {
     })
   }
 
-  function onDeleteNote(id: string) {
+  const onDeleteNote = (id: string) => {
     setNotes(prevNotes => {
       return prevNotes.filter(note => note.id !== id)
     })
   }
 
-  function addTag(tag: Tag) {
+  const addTag = (tag: Tag) => {
     setTags(prev => [...prev, tag])
   }
 
-  function updateTag(id: string, label: string) {
+  const updateTag = (id: string, label: string) => {
     setTags(prevTags => {
       return prevTags.map(tag => {
         if (tag.id === id) {
@@ -62,7 +62,7 @@ function App() {
     })
   }
 
-  function deleteTag(id: string) {
+  const deleteTag = (id: string) => {
     setTags(prevTags => {
       return prevTags.filter(tag => tag.id !== id)
     })
@@ -71,7 +71,7 @@ function App() {
   return (
     <Container className='my-4'>
       <Routes>
-        <Route path='/' element={<h1>Hi</h1>}>Home</Route>
+        <Route path='/' element={<NoteList />}>Home</Route>
 
         <Route
           path='/new'
@@ -80,7 +80,8 @@ function App() {
             onSubmit={onCreateNote}
             onAddTag={addTag}
             availableTags={tags}
-          />}>New</Route>
+          />}>New
+        </Route>
 
         <Route path='/:id' element={<h1>Hi</h1>}>
           <Route index element={<h1>Show</h1>} />
